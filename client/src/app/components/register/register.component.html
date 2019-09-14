@@ -1,0 +1,35 @@
+<div class="row d-flex justify-content-center">
+    <div class="col-sm-6">
+        <h2>Register</h2>
+        <form (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label for="email">Name</label>
+                <input [(ngModel)]="name" name="name" type="text" class="form-control" id="name"
+                    placeholder="Enter name">
+                <span class="error">{{errors.name}}</span>
+
+            </div>
+            <div class="form-group">
+                <label for="email">Email address</label>
+                <input [(ngModel)]="email" name="email" type="text" class="form-control" id="email"
+                    placeholder="Enter email">
+                <span class="error">{{errors.email}}</span>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input [(ngModel)]="password" name="password" type="password" class="form-control" id="password"
+                    placeholder="Password">
+                <span class="error">{{errors.password}}</span>
+            </div>
+            <div class="form-group">
+                <label for="password2"> Comfirm Password</label>
+                <input [(ngModel)]="password2" type="password" name="password2" class="form-control" id="password2"
+                    placeholder="Password">
+                <span class="error">{{errors.password2}}</span>
+            </div>
+
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</div>
